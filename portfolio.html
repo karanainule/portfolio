@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrushti Pandilwar Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            background-color: #f0f8ff;
+        }
+    
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+    
+        nav a:hover {
+            text-decoration: underline;
+        }
+    
+        section {
+            padding: 100px 50px;
+            text-align: center;
+        }
+    
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to bottom, #1abc9c, #16a085);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+        }
+    
+        .hero img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+    
+        .hero h1 {
+            margin-top: 20px;
+            font-size: 32px;
+        }
+    
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+    
+        .contact-info img {
+            width: 16px;
+            height: 16px;
+        }
+    
+        .contact-info div {
+            text-align: left;
+        }
+    
+        .skills, .projects, #about {
+            background-color: #ecf0f1;
+            margin: 50px 0;
+        }
+    
+        .skills, .projects {
+            padding: 50px;
+        }
+    
+        .skills h2, .projects h2, #about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+    
+        /* Skills Section */
+        .skills {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+            background-color: #ecf0f1;
+            border-radius: 15px;
+            margin: 30px 50px;
+            gap: 30px;
+        }
+    
+        #skills {
+  text-align: center;
+  padding: 50px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+
+.skill {
+  border: 2px solid #1abc9c;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  width: 100px;
+  background-color: transparent;
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 0.8s ease-out;
+}
+
+.skill img {
+  width: 50px;
+  height: 50px;
+}
+
+.skill p {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.skill.animate-left {
+  transform: translateX(-200%);
+}
+
+.skill.animate-right {
+  transform: translateX(200%);
+}
+
+.skill.animate-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+.skill img {
+  border: 2px solid #ddd; /* You can change the color of the border */
+  border-radius: 10px; /* Optional: Adds rounded corners to the border */
+  padding: 5px; /* Optional: Adds some space around the icon */
+  transition: box-shadow 0.3s ease-in-out; /* Adds smooth transition for shadow */
+}
+
+.skill img:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow on hover */
+}
+
+
+
+
+    
+        .projects .project {
+            padding: 20px;
+            border-radius: 15px;
+            background: #fff;
+          
+        }
+    
+        .projects .project a {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+    
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .photo {
+            box-shadow: 0 20px 20px rgb(236, 230, 230); /* Adds a shadow */
+            transition: box-shadow 0.3s box-shadow 0.5s;;   /* Smooth transition for hover effect */
+         }
+
+        
+      
+        .project {
+    padding: 20px;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(115, 226, 243, 0.3); /* Default blue shadow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.project:hover {
+    transform: translateY(-19px); /* Moves the project box up */
+    box-shadow: 0 15px 30px rgba(115, 226, 243, 0.9); /* Increased shadow with more spread and opacity */
+}
+
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: -10px; /* Moves the buttons up */
+        }
+
+        .buttons a {
+            display: inline-block;
+            text-decoration: none;
+            color: rgb(63, 54, 54);
+            background-color: #eef7f8;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px;
+            box-shadow: 0 6px 15px rgb(235, 228, 228);
+            transition: transform 0.3s, box-shadow 0.5s;
+        }
+
+        .buttons a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgb(239, 234, 234);
+        }
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite ease-in-out;
+            opacity: 0.8;
+        }
+
+        /* Add many stars with different sizes and positions */
+        .star:nth-child(1) {
+            width: 12px;
+            height: 12px;
+            top: 25%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .star:nth-child(2) {
+            width: 10px;
+            height: 10px;
+            top: 20%;
+            left: 55%;
+            animation-delay: 0.5s;
+        }
+
+        .star:nth-child(3) {
+            width: 12px;
+            height: 12px;
+            top: 30%;
+            left: 40%;
+            animation-delay: 1s;
+        }
+
+        .star:nth-child(4) {
+            width: 15px;
+            height: 15px;
+            top: 80%;
+            left: 72%;
+            animation-delay: 1.5s;
+        }
+
+        .star:nth-child(5) {
+            width: 10px;
+            height: 10px;
+            top: 90%;
+            left: 20%;
+            animation-delay: 2s;
+        }
+
+        .star:nth-child(6) {
+            width: 14px;
+            height: 14px;
+            top: 85%;
+            left: 80%;
+            animation-delay: 2.5s;
+        }
+
+        .star:nth-child(7) {
+            width: 18px;
+            height: 18px;
+            top: 40%;
+            left: 90%;
+            animation-delay: 3s;
+        }
+
+        .star:nth-child(8) {
+            width: 18px;
+            height: 18px;
+            top: 30%;
+            left: 70%;
+            animation-delay: 3.5s;
+        }
+
+        .star:nth-child(9) {
+            width: 12px;
+            height: 12px;
+            top: 100%;
+            left: 50%;
+            animation-delay: 4s;
+        }
+
+        .star:nth-child(10) {
+            width: 16px;
+            height: 16px;
+            top: 110%;
+            left: 90%;
+            animation-delay: 4.5s;
+        }
+
+        .star:nth-child(11) {
+            width: 12px;
+            height: 12px;
+            top: 70%;
+            left: 2%;
+            animation-delay: 4s;
+        }
+
+        
+        .star:nth-child(12) {
+            width: 12px;
+            height: 12px;
+            top: 110%;
+            left: 7%;
+            animation-delay: 4s;
+        }
+
+        .star:nth-child(13) {
+            width: 12px;
+            height: 12px;
+            top: 40%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 1;
+            }
+        }
+
+
+        .social-links {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links .icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-links .icon:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+
+
+
+/* Media Queries for Responsive Design */
+
+/* For screens smaller than 768px (Mobile Devices) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .hero {
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .hero img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+  }
+
+  .project {
+    margin: 10px 0;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .social-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* For screens between 768px and 1024px (Tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .skills-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for tablets */
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+/* Media Queries for Hero Section */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 100px 20px 50px; /* Adjusted padding for mobile */
+  }
+
+  .hero > div {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .hero img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .contact-info div {
+    text-align: center;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .buttons a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2 style="font-family: 'Lucida Handwriting'; font-weight: 700; color: white; text-align: center;">
+            SHRUSHTI PANDILWAR
+        </h2>
+    
+        <nav style="text-align: center; margin-top: 10px;">
+            <a href="#home" style="color: white;font-family: 'Lucida Handwriting'; text-decoration: none; margin: 0 15px; font-weight: bold;">Home</a>
+            <a href="#skills" style="color: white;font-family: 'Lucida Handwriting'; text-decoration: none; margin: 0 15px; font-weight: bold;">Skills</a>
+            <a href="#projects" style="color: white;font-family: 'Lucida Handwriting'; text-decoration: none; margin: 0 15px; font-weight: bold;">Projects</a>
+            <a href="#about" style="color: white; font-family: 'Lucida Handwriting'; text-decoration: none; margin: 0 15px; font-weight: bold;">About Me</a>
+        </nav>
+    </header>   
+        </nav>
+    </header>
+    
+
+    <section id="home" class="hero">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 30px; width: 80%; margin: auto;">
+            <!-- Left: Name and Designation -->
+             <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+            <div style="text-align: right; flex: 1;">
+                <h1 style="font-size: 2.5rem; margin: 0;">Shrushti Pandilwar</h1>
+                <p style="font-size: 1.2rem; margin: 5px 0;">X</p>
+                <p style="font-size: 1.2rem; margin: 0;">Developer</p>
+            </div>
+            <!-- Center: Circular Image -->
+            <div>
+                <img src="image.jpg" alt="Shrushti Pandilwar" class="photo" style="border-radius: 50%; border: 5px solid #fff; width: 300px; height: 300px; object-fit: cover; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);">
+            </div>
+            <!-- Right: Contact Information -->
+            <div style="flex: 1; text-align: left;">
+                <div style="margin-bottom: 15px;">
+                    <img src="phone logo.png" alt="Phone" style="vertical-align: middle; margin-right: 10px; width: 20px; height: 20px;">
+                    <span style="font-size: 1.2rem;">8421150026</span>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <img src="linkedin-logo.png" alt="LinkedIn" style="vertical-align: middle; margin-right: 10px; width: 20px; height: 20px;">
+                    <a href="https://linkedin.com/in/shrushti-pandilwar-94a808279" target="_blank" style="font-size: 1.2rem; color: white; text-decoration: none;">LinkedIn</a>
+                </div>
+                <div>
+                    <img src="mail logo.png" alt="Email" style="vertical-align: middle; margin-right: 10px; width: 20px; height: 20px;">
+                    <span style="font-size: 1.2rem;">shrushtipandilwar2004@gmail.com</span>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <a href="Shrushti_pandilwar_resume.pdf" target="_blank">My Resume</a>
+            <a href="https://drive.google.com/drive/folders/13RS3_NJ4vTIPPNQHPc3PfJSHYMr2Lx5G" target="_blank">My Certificates</a>
+        </div>
+        
+    </section>
+
+    
+
+    <section id="skills" style="background-color: #f8f9fa; padding: 50px;">
+        <h2 style="font-family: Lucida Handwriting; font-size: 40px;">Skills</h2>
+        <div class="skills-container">
+          <div class="skill animate-left">
+            <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML Icon">
+            <p>HTML</p>
+          </div>
+          <div class="skill animate-right">
+            <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS Icon">
+            <p>CSS</p>
+          </div>
+          <div class="skill animate-left">
+            <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript Icon">
+            <p>JavaScript</p>
+          </div>
+          <div class="skill animate-right">
+            <img src="https://img.icons8.com/plasticine/100/000000/react.png" alt="React Icon">
+            <p>React</p>
+          </div>
+          <div class="skill animate-left">
+            <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js Icon">
+            <p>Node.js</p>
+          </div>
+          <div class="skill animate-right">
+            <img src="express-logo.png" alt="Express Icon">
+            <p>Express</p>
+          </div>
+          <div class="skill animate-left">
+            <img src="c++ logo.png" alt="C++ Icon">
+            <p>c++</p>
+          </div>
+          <div class="skill animate-right">
+            <img src="https://img.icons8.com/color/48/mongodb.png" alt="MongoDB Icon">
+            <p>MongoDB</p>
+          </div>
+          <div class="skill animate-left">
+            <img src="mysql logo.png" alt="MySQL Icon">
+            <p>MYSQL</p>
+          </div>
+          <div class="skill animate-right">
+            <img src="https://img.icons8.com/color/48/git.png" alt="Git Icon">
+            <p>Git</p>
+          </div>
+          <div class="skill animate-left">
+            <img src="java logo.png" alt="java Icon">
+            <p>Java</p>
+          </div>
+          <div class="skill animate-right">
+            <img src="https://img.icons8.com/color/48/figma.png" alt="Figma Icon">
+            <p>Figma</p>
+          </div>
+          <div class="skill animate-left">
+            <img src="python logo.png" alt="python Icon">
+            <p>Python</p>
+          </div>
+          <div class="skill animate-right">
+            <img src="android-studio-logo.png" alt="Android Studio Icon">
+            <p>Android Studio</p>
+          </div>
+        </div>
+      </section>
+      
+      <script>
+       // Function to animate skills
+function animateSkills() {
+  const skillItems = document.querySelectorAll('.skill');
+  skillItems.forEach(skill => skill.classList.add('animate-in'));
+}
+
+// Observer for scroll-triggered animation
+const skillsContainer = document.querySelector('#skills');
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateSkills();
+        observer.unobserve(skillsContainer); // Stop observing after the first trigger
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+
+// Start observing the skills section
+observer.observe(skillsContainer);
+
+// Event listener for the "Skills" button in the navigation
+document.querySelector('a[href="#skills"]').addEventListener('click', (event) => {
+  event.preventDefault(); // Prevent default anchor behavior
+  document.querySelector('#skills').scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to skills section
+  animateSkills(); // Trigger animation
+});
+      </script>
+    
+     
+      
+      
+    
+
+    <section id="projects" style="background-color: #f8f9fa; padding: 50px; text-align: center;">
+        <h2 style="margin-bottom: 30px; font-family: Lucida Handwriting; font-size: 35px;">Projects</h2>
+        <div class="project-grid" 
+             style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; align-items: start; max-width: 1200px; margin: auto;">
+            
+            <!-- Project 1 -->
+            <div class="project" 
+                 style="padding: 20px; border: 2px solid #1abc9c; border-radius: 15px; background: #ffffff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: left;">
+                <h3 style="color: #1abc9c;">Wealthcare - Finance Dashboard 📊💼</h3>
+                <p>Wealthcare is a financial analysis and forecasting tool for manufacturing businesses. By integrating with company data, it transforms raw data into insights through charts (area, line, pie, bar). Using regression analysis, it forecasts the next 12 months' revenue. Data is stored in MongoDB for scalability and robust management.</p>
+                <a href="https://github.com/shrushti-p/Wealthcare--Finance-Dashboard-" target="_blank" style="color: #1abc9c; text-decoration: none;">GitHub Link</a>
+            </div>
+    
+            <!-- Project 2 -->
+            <div class="project" 
+                 style="padding: 20px; border: 2px solid #1abc9c; border-radius: 15px; background: #ffffff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: left;">
+                <h3 style="color: #1abc9c;">Facial Expression Recognition System 😊😡😱</h3>
+                <p>This project focuses on developing a facial expression recognition system to facilitate intelligent Human-Computer Interaction. Using CNNs, it classifies facial expressions into seven emotions (happiness, fear, anger, neutral, disgust, sadness, and surprise). Technologies include TensorFlow, Keras, NumPy, and OpenCV.</p>
+                <a href="https://github.com/shrushti-p/Emotion-Recognition-system" target="_blank" style="color: #1abc9c; text-decoration: none;">GitHub Link</a>
+            </div>
+        </div>
+    
+        <!-- Project 3 centered below -->
+        <div class="project" 
+             style="margin-top: 30px; padding: 20px; border: 2px solid #1abc9c; border-radius: 15px; background: #ffffff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); max-width: 600px; margin-left: auto; margin-right: auto; text-align: left;">
+            <h3 style="color: #1abc9c;">Aditya Foods 🍴🌱 (Ongoing Project)</h3>
+            <p>Aditya Foods is a food production factory platform offering various products and recipes. Building using the MERN stack. A key feature of the platform will be the implementation of Machine Learning. Once a product is added to the cart, users will see the recipe and health benefits of the product. Additionally, personalized recommendations will be provided based on search and purchase history, making the shopping experience more intuitive and tailored to individual preferences. This feature is still being developed and will be integrated in the upcoming phases of the project. 🍳💡</p>
+            <a href="https://github.com/shrushti-p/Aditya_foods"  target="_blank" style="color: #1abc9c; text-decoration: none;">GitHub Link</a>
+        </div>
+    </section>
+    
+    
+    <section id="about" style="background-color:  #e8faff; ">
+        <h2 style="font-family: Lucida Handwriting;">About Me</h2>
+        <p>Hello! I am Shrushti Pandilwar, Student at PICT, Pune [Pursuing BE in Information Technology]. My journey in tech started with a Diploma in Computer Engineering from Government Residential Women’s Polytechnic Latur, where I consistently ranked in the top 3 and took on leadership roles like General Secretary and Class Representative. I’ve always been passionate about blending innovation with real-world problem-solving. Each step of my journey fuels my curiosity and drives me to grow, connect, and create impactful solutions..</p>
+       <br>
+       <br>
+        <p>Have an exciting project you need to collabrate? Send me an email or contact me via LinkedIn !</p>
+
+        <!-- Social Links -->
+<div class="social-links">
+    <a href="https://linkedin.com/in/shrushti-pandilwar-94a808279" target="_blank" title="LinkedIn">
+        <img style="height: 30px; width: 35px;" src="linkedin-logo.png" alt="LinkedIn" class="icon">
+    </a>
+    <a href="mailto:your-shrushtipandilwar2004@gmail.com" title="Email">
+        <img style="height: 45px; width: 45 px;" src="mail logo.png" alt="Email" class="icon">
+    </a>
+</div>
+
+   
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025 Shrushti Pnadilwar. All rights reserved.</p>
+    </footer>
+</body>
+</html>
