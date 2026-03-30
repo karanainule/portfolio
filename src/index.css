@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-950 text-gray-100 font-sans antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-950;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-indigo-600 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-indigo-500;
+  }
+
+  ::selection {
+    @apply bg-indigo-500/30 text-white;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent;
+  }
+
+  .bg-glass {
+    background: rgba(17, 24, 39, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-max {
+    @apply max-w-6xl mx-auto;
+  }
+}
+
+/* ============================================
+   LIGHT MODE OVERRIDES
+   Applied when .dark class is removed from <html>
+   ============================================ */
+
+/* Body & root */
+html:not(.dark) body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+html:not(.dark) #root > div {
+  background-color: #f8fafc !important;
+}
+
+/* Sections */
+html:not(.dark) section {
+  background-color: #f8fafc !important;
+}
+
+/* Navbar */
+html:not(.dark) nav {
+  background-color: rgba(248, 250, 252, 0.92) !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Footer */
+html:not(.dark) footer {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* ---- Backgrounds ---- */
+html:not(.dark) .bg-gray-950 {
+  background-color: #f8fafc !important;
+}
+html:not(.dark) .bg-gray-900 {
+  background-color: #ffffff !important;
+}
+
+/* Cards and surfaces */
+html:not(.dark) .bg-gray-900\/60 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+html:not(.dark) .bg-gray-900\/80 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+html:not(.dark) .bg-gray-800 {
+  background-color: #e2e8f0 !important;
+}
+html:not(.dark) .bg-gray-800\/60 {
+  background-color: rgba(226, 232, 240, 0.6) !important;
+}
+html:not(.dark) .bg-gray-800\/80 {
+  background-color: rgba(226, 232, 240, 0.8) !important;
+}
+
+/* ---- Borders ---- */
+html:not(.dark) .border-gray-800 {
+  border-color: #cbd5e1 !important;
+}
+html:not(.dark) .border-gray-800\/60 {
+  border-color: rgba(203, 213, 225, 0.8) !important;
+}
+html:not(.dark) .border-gray-800\/50 {
+  border-color: rgba(203, 213, 225, 0.6) !important;
+}
+html:not(.dark) .border-gray-700 {
+  border-color: #94a3b8 !important;
+}
+html:not(.dark) .border-gray-700\/60 {
+  border-color: rgba(148, 163, 184, 0.6) !important;
+}
+html:not(.dark) .border-gray-700\/80 {
+  border-color: rgba(148, 163, 184, 0.8) !important;
+}
+
+/* ---- Text ---- */
+html:not(.dark) .text-white {
+  color: #0f172a !important;
+}
+html:not(.dark) .text-gray-100 {
+  color: #1e293b !important;
+}
+html:not(.dark) .text-gray-300 {
+  color: #334155 !important;
+}
+html:not(.dark) .text-gray-400 {
+  color: #475569 !important;
+}
+html:not(.dark) .text-gray-500 {
+  color: #64748b !important;
+}
+html:not(.dark) .text-gray-600 {
+  color: #94a3b8 !important;
+}
+
+/* Keep accent/indigo/purple/green colors as-is in light mode */
+html:not(.dark) .text-indigo-400 {
+  color: #4f46e5 !important;
+}
+html:not(.dark) .text-indigo-300 {
+  color: #6366f1 !important;
+}
+html:not(.dark) .text-indigo-400.bg-clip-text {
+  color: transparent !important;
+}
+html:not(.dark) .text-emerald-400 {
+  color: #059669 !important;
+}
+
+/* Scrollbar in light mode */
+html:not(.dark) ::-webkit-scrollbar-track {
+  background-color: #f1f5f9 !important;
+}
+html:not(.dark) body {
+  scrollbar-color: #6366f1 #f1f5f9;
+}
+
+/* Navbar logo text stays gradient */
+html:not(.dark) .bg-clip-text {
+  color: transparent !important;
+}
+
+/* Fix skill/tech badge bg in light mode */
+html:not(.dark) .bg-gray-900\/80 {
+  background-color: #f1f5f9 !important;
+}
+
+/* Floating pills on hero */
+html:not(.dark) .shadow-black\/40 {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12) !important;
+}
