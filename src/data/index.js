@@ -22,7 +22,7 @@ export const personalInfo = {
 }
 
 export const stats = [
-  { label: 'Projects Built', value: '3+' },
+  { label: 'Projects Built', value: '7+' },
   { label: 'Internship', value: '1' },
   { label: 'Achievements', value: '2+' },
 ]
