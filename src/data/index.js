@@ -9,7 +9,7 @@ export const personalInfo = {
   github: 'https://github.com/karanainule',
   linkedin: 'https://www.linkedin.com/in/karan-ainule',
   whatsapp: 'https://wa.me/919322390030?text=Hi%20Karan,%20I%20saw%20your%20portfolio',
-  resume: '/KaranAinule_resume.pdf',
+  resume: 'https://drive.google.com/file/d/1eKCSHCByTARZFM2FUNbuhPYVkqK098oO/view?usp=drive_link',
   profileImage: '/MyPicture.jpg',
   typingSequence: [
     'Full Stack Developer', 2000,
@@ -65,7 +65,7 @@ export const experience = [
     period: 'Jan 2025 – Feb 2025',
     duration: '2 months',
     location: 'Pune, Maharashtra (Remote)',
-    description: 'Developed full-stack web applications to solve real-world problems as part of an intensive internship program. Collaborated within agile teams to ship high-quality, scalable solutions — sharpening skills in React, REST API design, and modern deployment workflows.',
+    description: 'Developed full-stack web applications to solve real-world problems as part of an intensive internship program. Collaborated within agile teams to ship high-quality, scalable solutions using modern tech stacks.',
     type: 'internship',
   },
   {
@@ -74,7 +74,7 @@ export const experience = [
     period: 'Aug 2023 – Sep 2024',
     duration: '1 yr 2 months',
     location: 'Pune, Maharashtra',
-    description: 'Spearheaded campus recruitment drives as the key liaison between 100+ students and top-tier recruiters. Organized technical training workshops, maintained placement analytics, and consistently delivered measurable outcomes in student career placements.',
+    description: 'Spearheaded campus recruitment drives as the key liaison between 100+ students and top-tier recruiters. Organized technical training workshops, maintained placement analytics, and coordinated with HR teams.',
     type: 'role',
   },
 ]
@@ -85,7 +85,7 @@ export const education = [
     institution: 'JSPMs Jayawantrao Sawant College of Engineering',
     period: '2022 – 2026',
     location: 'Pune, Maharashtra, India',
-    description: 'Pursuing B.E. in Information Technology with core focus on full-stack development, data structures & algorithms, and modern software engineering practices. Actively competing in national-level tech events and contributing to open-source projects.',
+    description: 'Pursuing B.E. in Information Technology with core focus on full-stack development, data structures & algorithms, and modern software engineering practices. Actively competing in hackathons and building production applications.',
   },
 ]
 
@@ -95,7 +95,7 @@ export const projects = [
     title: 'PharmaGuard',
     emoji: '💊',
     tagline: 'AI-Powered Medicine Authentication',
-    description: 'A production-grade medicine authentication platform that helps users verify pharmaceutical product authenticity, access detailed drug information, and find nearby pharmacies — powered by a FastAPI backend and OpenAI-driven drug analysis engine.',
+    description: 'A production-grade medicine authentication platform that helps users verify pharmaceutical product authenticity, access detailed drug information, and find nearby pharmacies — built with React, FastAPI, and OpenAI API.',
     tech: ['React', 'FastAPI', 'Python', 'OpenAI API', 'HTML5', 'CSS3', 'JavaScript'],
     github: 'https://github.com/karanainule/PharmaGuard',
     live: 'https://pharma-guard-rho.vercel.app/',
@@ -107,7 +107,7 @@ export const projects = [
     title: 'Authenticity Validator for Academia',
     emoji: '🎓',
     tagline: 'AI + OCR Credential Verification',
-    description: 'A full-stack platform that leverages OCR and AI to detect fraudulent academic certificates in real time. Institutions and employers can instantly validate the legitimacy of degrees — built with a robust FastAPI + OCR pipeline.',
+    description: 'A full-stack platform that leverages OCR and AI to detect fraudulent academic certificates in real time. Institutions and employers can instantly validate the legitimacy of degree credentials.',
     tech: ['React', 'Vite', 'Tailwind CSS', 'FastAPI', 'Python', 'Tesseract OCR', 'OpenCV', 'PostgreSQL', 'SQLite'],
     github: 'https://github.com/karanainule/Authenticity-Validator-for-Academia',
     live: 'https://degreeguard.vercel.app/',
@@ -119,7 +119,7 @@ export const projects = [
     title: 'Bassline Music Player',
     emoji: '🎵',
     tagline: 'Spotify-Inspired Web Music Player',
-    description: 'A pixel-perfect, fully responsive music player UI inspired by modern streaming platforms. Demonstrates mastery of DOM manipulation, CSS animations, event-driven JavaScript architecture, and accessible UI/UX design from Figma to code.',
+    description: 'A pixel-perfect, fully responsive music player UI inspired by modern streaming platforms. Demonstrates mastery of DOM manipulation, CSS animations, event-driven JavaScript architecture.',
     tech: ['HTML5', 'CSS3', 'JavaScript', 'Figma'],
     github: 'https://github.com/karanainule/bassline-music-player',
     live: null,
@@ -134,7 +134,7 @@ export const achievements = [
     title: 'Bharat AI Quest Competition',
     organization: 'National Payments Corporation of India (NPCI)',
     date: '2025 | IIT Bombay',
-    description: 'Qualified to Level 3 in the prestigious Bharat AI Quest — a nationwide competition by NPCI featuring thousands of participants. Demonstrated strong proficiency in AI/ML applied to the fintech and digital payments domain.',
+    description: 'Qualified to Level 3 in the prestigious Bharat AI Quest — a nationwide competition by NPCI featuring thousands of participants. Demonstrated strong proficiency in AI/ML applications.',
     badges: ['Level 3 Qualifier', 'AI & ML', 'FinTech', 'IIT Bombay'],
     images: [
       { src: '/bharatai/meiit.jpg', alt: 'Bharat AI Quest at IIT Bombay' },
@@ -147,7 +147,7 @@ export const achievements = [
     title: 'Global Fintech Fest 2025',
     organization: "World's Largest Fintech Conference",
     date: 'Oct 7–9, 2025 | Jio World Centre, Mumbai',
-    description: "Attended the 6th edition of Global Fintech Fest (GFF) — organized by NPCI, PCI, and FCC with 100,000+ participants from 75+ countries. Explored cutting-edge fintech innovations, attended AI-powered financial services keynotes, and networked with global industry leaders.",
+    description: "Attended the 6th edition of Global Fintech Fest (GFF) — organized by NPCI, PCI, and FCC with 100,000+ participants from 75+ countries. Explored cutting-edge fintech innovations and AI applications.",
     badges: ['NPCI Event', 'AI in Finance', 'Networking', '100K+ Attendees'],
     images: [
       { src: '/gff/goodies.jpg', alt: 'GFF Goodies' },
